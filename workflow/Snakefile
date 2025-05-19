@@ -10,6 +10,9 @@ STRAINS = config["strains"]
 PER_STRAIN_FASTA = config["per_strain_fasta"]
 OUTPUT_DIR=config["output_directory"]
 
+HTTP = HTTPRemoteProvider()
+FTP = FTPRemoteProvider()
+
 def get_target_files(output_dir):
     target_files = dict(
     snp_split_targets =[
