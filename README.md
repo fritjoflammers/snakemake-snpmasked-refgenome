@@ -15,7 +15,7 @@ Create a reference genome sequence with "injected" or masked SNPs/SNVs from othe
 
 Download previously (in folder data/input_files):
 
-- ftp.sanger.ac.uk/pub/REL-1505-SNPs_Indels/mgp.v5.merged.snps_all.dbSNP142.vcf.gz
+- https://ftp.ebi.ac.uk/pub/databases/mousegenomes/REL-1505-SNPs_Indels/mgp.v5.merged.snps_all.dbSNP142.vcf.gz
 - https://cf.10xgenomics.com/supp/cell-exp/refdata-gex-mm10-2020-A.tar.gz 
 
 Downloaded as part of the pipeline:
