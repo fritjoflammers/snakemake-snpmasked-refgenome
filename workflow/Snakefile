@@ -54,11 +54,13 @@ rule all:
         all_files,
 
 
-# rule retrieve_snp_vcf:
-#    #    input: HTTP.remote("ftp.sanger.ac.uk/pub/REL-1505-SNPs_Indels/mgp.v5.merged.snps_all.dbSNP142.vcf.gz", keep_local=True)
-#    output: "data/mgp.v5.merged.snps_all.dbSNP142.vcf.gz"
-#    run:
-# 	print("File is there {output}")
+rule retrieve_snp_vcf:
+   input: HTTP.remote("https://ftp.ebi.ac.uk/pub/databases/mousegenomes/REL-1505-SNPs_Indels/mgp.v5.merged.snps_all.dbSNP142.vcf.gz", keep_local=True)
+   output: "data/mgp.v5.merged.snps_all.dbSNP142.vcf.gz"
+   run:
+        outputName = os.path.basename(input[0])
+        shell("mv {input} {outputName}")
+        print("File is there {output}")
 
 include: "rules/prepare.smk"
 include: "rules/maskfasta.smk"
